@@ -119,11 +119,8 @@ all = [
 ]
 
 [project.urls]
-homepage = "https://mineru.net/"
-documentation = "https://opendatalab.github.io/MinerU/"
-repository = "https://github.com/opendatalab/MinerU"
-issues = "https://github.com/opendatalab/MinerU/issues"
-License = "https://github.com/opendatalab/MinerU/blob/master/LICENSE.md"
+homepage = "https://github.com/custom-ocr"
+repository = "https://github.com/custom-ocr/ocr_service"
 
 [project.scripts]
 mineru = "mineru.cli.client:main"
