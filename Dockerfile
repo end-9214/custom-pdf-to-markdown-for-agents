@@ -30,8 +30,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Copy project files
 COPY . /app
 
-# Install Python dependencies and local mineru package with pipeline & s3 extras
+# Install Python dependencies, CPU-only PyTorch, and local mineru package with pipeline & s3 extras
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel
+RUN pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cpu
 RUN pip install --no-cache-dir -e .[pipeline,s3]
 
 # Download ONLY the lightweight pipeline model weights into container image
